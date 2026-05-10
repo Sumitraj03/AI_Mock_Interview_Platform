@@ -98,10 +98,3 @@ The video room works locally with browser camera and mic. For Stream:
 npm run build
 ```
 
-## Deploy To Vercel
-
-1. Push the repository to GitHub.
-2. Import it in Vercel.
-3. Add environment variables from `.env.example`.
-4. Build command: `npm run build`.
-5. Output directory: `dist`.
