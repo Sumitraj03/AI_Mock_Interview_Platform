@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 222 84% 5%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 176 54% 91%;
+    --secondary-foreground: 183 65% 18%;
+    --muted: 210 38% 94%;
+    --muted-foreground: 215 16% 45%;
+    --accent: 14 92% 95%;
+    --accent-foreground: 12 76% 28%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 173 80% 36%;
+    --success: 160 84% 39%;
+    --warning: 38 92% 50%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 210 40% 98%;
+    --card: 222 42% 10%;
+    --card-foreground: 210 40% 98%;
+    --primary: 174 72% 48%;
+    --primary-foreground: 222 47% 7%;
+    --secondary: 223 28% 17%;
+    --secondary-foreground: 178 62% 76%;
+    --muted: 223 28% 15%;
+    --muted-foreground: 215 20% 72%;
+    --accent: 12 44% 18%;
+    --accent-foreground: 18 96% 82%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 223 24% 20%;
+    --input: 223 24% 20%;
+    --ring: 173 80% 46%;
+    --success: 160 84% 39%;
+    --warning: 38 92% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100svh;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    letter-spacing: 0;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+    letter-spacing: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: 0;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-white/20 bg-white/75 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-card/70;
+  }
+
+  .product-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .hero-mask {
+    mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
+  }
+}
